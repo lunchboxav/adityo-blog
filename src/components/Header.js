@@ -6,28 +6,27 @@ import hCover from '../../assets/img/cover-horizontal.png'
 
 const HeaderWrapper = styled.div`
   background: #1ece6f;
-  display: flex;
-  width: 240px;
   height: 100vh;
   background: url(${vCover});
   background-position: center;
+  padding: 0 40px;
 
-  @media (max-width: 1200px) {
-    margin-bottom: 1.45rem;
-    height: 100%;
-    width: 100vw;
-    background: url(${hCover});
-    background-position: center;
-
+  @media (max-width: 800px) {
+    padding: 0 20px;
   }
-
+  @media (max-width: 600px) {
+    height: 100%;
+    background: url(${hCover});
+    backgroun-position: center;
+  }
 `
 
 const Headline = styled.div`
   margin: 0 auto;
   padding: 1.45rem 1.0875rem;
   h1 {
-    margin: 0;
+    margin-bottom: 0;
+    text-align: center;
   }
   p {
     margin-top: 0;

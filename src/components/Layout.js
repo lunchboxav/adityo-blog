@@ -9,15 +9,15 @@ const MainContainer = styled.div`
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: row;
-  flex-flow: wrap;
-  justify-content: space-around;
-  height: 100%;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
 `
 
 const ContentWrapper = styled.div`
   margin: 0 auto;
-  width: 960px;
+  flex: 2;
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
 `
