@@ -5,19 +5,21 @@ import vCover from '../../assets/img/cover-vertical.png'
 import hCover from '../../assets/img/cover-horizontal.png'
 
 const HeaderWrapper = styled.div`
-  background: #1ece6f;
   height: 100vh;
   background: url(${vCover});
   background-position: center;
-  padding: 0 40px;
-
+  width: 25%;
+  max-width: 320px;
+  padding: 0 15px;
   @media (max-width: 800px) {
-    padding: 0 20px;
+    
   }
   @media (max-width: 600px) {
     height: 100%;
     background: url(${hCover});
-    backgroun-position: center;
+    background-position: center;
+    min-width: 100%;
+    padding: 0;
   }
 `
 
