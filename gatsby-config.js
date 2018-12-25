@@ -4,7 +4,8 @@ module.exports = {
 		description: 'Home of Adityo'
 	},
 	plugins: [
-		`gatsby-transformer-remark`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-styled-components`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {

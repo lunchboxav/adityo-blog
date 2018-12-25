@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Layout from '../components/Layout';
 
 const SingleTagTemplate = ({data, pageContext}) => {
   const { posts, tagName } = pageContext
   return (
-    <div style={{fontFamily: 'avenir'}}>
+    <Layout>
       <div>
         Posts about {`${tagName}`}
       </div>
@@ -21,7 +22,7 @@ const SingleTagTemplate = ({data, pageContext}) => {
           })}
         </ul>
       </div>
-    </div>
+    </Layout>
   )
 }
 

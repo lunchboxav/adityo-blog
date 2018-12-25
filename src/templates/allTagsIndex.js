@@ -1,10 +1,11 @@
 import React from "react"
 import { Link } from 'gatsby'
+import Layout from "../components/Layout";
 
 const AllTagsTemplate = ({data, pageContext}) => {
   const { tags } = pageContext
   return (
-    <div style={{fontFamily: 'avenir'}}>
+    <Layout>
       <div>
         <ul>
           {tags.map((tagName, index) => {
@@ -18,7 +19,7 @@ const AllTagsTemplate = ({data, pageContext}) => {
           })}
         </ul>
       </div>
-    </div>
+    </Layout>
   )
 }
 
