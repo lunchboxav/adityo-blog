@@ -18,7 +18,7 @@ const MainContainer = styled.div`
 const ContentWrapper = styled.div`
   margin: 0 auto;
   flex: 2;
-  padding: 0px 1.0875rem 1.45rem;
+  padding: 0px 1.875rem 1.45rem;
   padding-top: 0;
 `
 const Layout = ({ children }) => (
