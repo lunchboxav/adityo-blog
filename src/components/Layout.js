@@ -19,8 +19,24 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
   flex: 2;
   padding: 0px 1.875rem 1.45rem;
-  padding-top: 0;
+  padding-top: 10px;
+  background-color: #e7fff2;
+  margin: 80px;
+
+  @media (max-width: 1024px) {
+    margin: 50px;
+  }
+
+  @media (max-width: 800px) {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    font-style: normal;
+  }
 `
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -43,10 +59,13 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'tech, personal, writing, design' }
           ]}>
           <html lang="en" />
+          <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,700i,900|Raleway:300i,400,400i" rel="stylesheet"/>
         </Helmet>
         <MainContainer>
           <Header siteTitle={data.site.siteMetadata.title} siteDescription={data.site.siteMetadata.description} />
-          <ContentWrapper>{children}</ContentWrapper>
+          <ContentWrapper>
+              {children}
+          </ContentWrapper>
         </MainContainer>
       </>
     )}

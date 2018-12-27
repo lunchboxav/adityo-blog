@@ -16,11 +16,11 @@ const IndexPage = ({data}) => {
               key={frontmatter.path}
               style={{marginBottom: '1rem'}}
             >
-              <h1>
+              <h2>
                 <Link to={frontmatter.path}>
                   {frontmatter.title}
                 </Link>
-              </h1>
+              </h2>
               <p className="subheading">
                 {frontmatter.date}
               </p>
@@ -31,9 +31,9 @@ const IndexPage = ({data}) => {
           )
         })}
 
-        <div>
+        {/*<div>
           <Link to='/tags'>Browse by Tag</Link>
-        </div>
+        </div> */}
       </div>
     </Layout>
   )
