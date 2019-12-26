@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
-// import Header from '../components/Header'
-// import { GlobalStyle } from "../theme/globalStyle";
 
 const IndexPage = ({data}) => {
   const { edges } = data.allMarkdownRemark
@@ -14,7 +12,7 @@ const IndexPage = ({data}) => {
           return (
             <div
               key={frontmatter.path}
-              style={{marginBottom: '1rem'}}
+              style={{marginBottom: '2rem'}}
             >
               <h2>
                 <Link to={frontmatter.path}>
@@ -38,41 +36,6 @@ const IndexPage = ({data}) => {
     </Layout>
   )
 }
-
-/*
-const Layout = ({data}) => {
-  const { edges } = data.allMarkdownRemark
-  return (
-    <div>
-      <GlobalStyle />
-      <Header />
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
-      }}>
-        {edges.map(edge => {
-          const {frontmatter} = edge.node
-          return (
-            <div
-              key={frontmatter.path}
-              style={{marginBottom: '1rem'}}
-            >
-              <Link to={frontmatter.path}>
-                {frontmatter.title}
-              </Link>
-            </div>
-          )
-        })}
-
-        <div>
-          <Link to='/tags'>Browse by Tag</Link>
-        </div>
-      </div>
-    </div>
-  )
-} 
-*/
 
 export const query = graphql`
   query HomepageQuery {
