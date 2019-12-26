@@ -30,5 +30,6 @@ export const GlobalStyle = createGlobalStyle`
   .subheading {
     font-style: italic;
     margin-top: -20px;
+    margin-bottom: -10px;
   }
 `
